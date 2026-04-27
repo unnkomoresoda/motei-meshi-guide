@@ -173,26 +173,54 @@ body {
   transition: width 0.3s ease;
 }
 
-/* Next Series Teaser */
-.next-series {
+/* Donation Section */
+.donation-section {
   margin-top: 48px;
   text-align: center;
-  color: #888;
-  font-size: 16px;
   padding: 24px;
-  background: rgba(255, 215, 0, 0.05);
-  border-left: 4px solid #ffd700;
-  border-radius: 8px;
+}
+
+/* PayPay Donation Button */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 56px;
+  padding: 14px 22px;
+  border-radius: 14px;
+  background: linear-gradient(180deg, #2dbd67 0%, #1f9f53 55%, #187c42 100%);
+  color: #fff;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 0.02em;
+  text-align: center;
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.22), inset 0 1px 0 rgba(255, 255, 255, 0.18), inset 0 -1px 0 rgba(0, 0, 0, 0.12);
+  cursor: pointer;
   transition: all 0.3s ease;
 }
 
-.next-series:hover {
-  background: rgba(255, 215, 0, 0.1);
-  color: #ffd700;
+.btn-donate,
+.btn-donate:link,
+.btn-donate:visited,
+.btn-donate:hover,
+.btn-donate:active {
+  color: #fff;
+  text-decoration: none;
 }
 
-.next-series p {
-  margin: 0;
+.btn-donate:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.04);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.24), inset 0 1px 0 rgba(255, 255, 255, 0.2), inset 0 -1px 0 rgba(0, 0, 0, 0.14);
+}
+
+.btn-donate-sub {
+  font-size: 12px;
+  font-weight: 500;
+  opacity: 0.9;
 }
 
 /* Responsive Design */
