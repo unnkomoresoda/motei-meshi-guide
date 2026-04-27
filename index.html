@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>男のモテ飯ガイド</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="page">
+    <header class="hero">
+      <p class="eyebrow">男のモテ飯ガイド</p>
+      <h1>全編無料公開</h1>
+      <p class="lead">
+        ただし、最後まで読んだ男だけが分かる。
+      </p>
+    </header>
+
+    <!-- Manga Viewer -->
+    <div class="manga-viewer">
+      <div class="manga-container" id="mangaContainer">
+        <div class="manga-slide">
+          <img src="images/1.png" alt="Page 1" />
+        </div>
+        <div class="manga-slide">
+          <img src="images/2.png" alt="Page 2" />
+        </div>
+        <div class="manga-slide">
+          <img src="images/3.png" alt="Page 3" />
+        </div>
+        <div class="manga-slide">
+          <img src="images/4.png" alt="Page 4" />
+        </div>
+        <div class="manga-slide">
+          <img src="images/5.png" alt="Page 5" />
+        </div>
+        <div class="manga-slide">
+          <img src="images/6.png" alt="Page 6" />
+        </div>
+      </div>
+
+      <!-- Navigation Buttons -->
+      <button class="nav-btn prev-btn" id="prevBtn" aria-label="Previous page">
+        ‹
+      </button>
+      <button class="nav-btn next-btn" id="nextBtn" aria-label="Next page">
+        ›
+      </button>
+
+      <!-- Pagination -->
+      <div class="pagination">
+        <span id="pageNumber">1</span> / <span id="totalPages">6</span>
+      </div>
+
+      <!-- Progress Bar -->
+      <div class="progress-bar">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+    </div>
+
+    <!-- Next Series Teaser -->
+    <footer class="next-series">
+      <p>▶ 次回：焼肉で落とす夜</p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
