@@ -17,6 +17,8 @@ class MangaViewer {
     // Button listeners
     document.getElementById('prevBtn').addEventListener('click', () => this.prevPage());
     document.getElementById('nextBtn').addEventListener('click', () => this.nextPage());
+    document.getElementById('prev10Btn').addEventListener('click', () => this.prevPage(10));
+    document.getElementById('next10Btn').addEventListener('click', () => this.nextPage(10));
 
     // Keyboard navigation
     document.addEventListener('keydown', (e) => {
@@ -77,6 +79,8 @@ class MangaViewer {
     // Update button states
     document.getElementById('prevBtn').disabled = pageIndex === 0;
     document.getElementById('nextBtn').disabled = pageIndex === this.totalPages - 1;
+    document.getElementById('prev10Btn').disabled = pageIndex < 10;
+    document.getElementById('next10Btn').disabled = pageIndex > this.totalPages - 11;
 
     this.currentPage = pageIndex;
 
@@ -84,12 +88,12 @@ class MangaViewer {
     localStorage.setItem('mangaPage', pageIndex);
   }
 
-  nextPage() {
-    this.showPage(this.currentPage + 1);
+  nextPage(pages = 1) {
+    this.showPage(this.currentPage + pages);
   }
 
-  prevPage() {
-    this.showPage(this.currentPage - 1);
+  prevPage(pages = 1) {
+    this.showPage(this.currentPage - pages);
   }
 }
 

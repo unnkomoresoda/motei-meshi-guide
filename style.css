@@ -136,6 +136,16 @@ body {
   }
 }
 
+/* Pagination Container */
+.pagination-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 16px;
+  flex-wrap: wrap;
+}
+
 /* Pagination */
 .pagination {
   position: relative;
@@ -147,12 +157,42 @@ body {
   font-size: 14px;
   z-index: 10;
   backdrop-filter: none;
-  margin-top: 16px;
+  flex: 0 0 auto;
 }
 
 #pageNumber {
   font-weight: 700;
   color: #ffd700;
+}
+
+/* ±10 Page Navigation Buttons */
+.nav-btn-10 {
+  background: rgba(255, 215, 0, 0.1);
+  border: 1px solid rgba(255, 215, 0, 0.3);
+  color: #ffd700;
+  font-size: 13px;
+  padding: 8px 14px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  white-space: nowrap;
+  min-width: 70px;
+}
+
+.nav-btn-10:hover:not(:disabled) {
+  background: rgba(255, 215, 0, 0.2);
+  border-color: rgba(255, 215, 0, 0.6);
+  transform: scale(1.05);
+}
+
+.nav-btn-10:active:not(:disabled) {
+  transform: scale(0.95);
+}
+
+.nav-btn-10:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
 }
 
 /* Progress Bar */
@@ -242,9 +282,19 @@ body {
     border-radius: 12px;
   }
 
+  .pagination-container {
+    gap: 12px;
+  }
+
   .pagination {
     font-size: 12px;
     padding: 6px 12px;
+  }
+
+  .nav-btn-10 {
+    font-size: 12px;
+    padding: 6px 10px;
+    min-width: 60px;
   }
 }
 
