@@ -20,6 +20,9 @@ class MangaViewer {
     document.getElementById('prev10Btn').addEventListener('click', () => this.prevPage(10));
     document.getElementById('next10Btn').addEventListener('click', () => this.nextPage(10));
 
+    // Image zoom listeners
+    this.setupImageZoom();
+
     // Keyboard navigation
     document.addEventListener('keydown', (e) => {
       if (e.key === 'ArrowLeft') this.prevPage();
@@ -32,6 +35,44 @@ class MangaViewer {
 
     // Initialize
     this.showPage(0);
+  }
+
+  setupImageZoom() {
+    const modal = document.getElementById('imageModal');
+    const modalImg = document.getElementById('modalImage');
+    const closeBtn = document.getElementById('modalClose');
+
+    // Add click listeners to all images
+    const images = document.querySelectorAll('.manga-slide img');
+    images.forEach((img) => {
+      img.addEventListener('click', (e) => {
+        modal.classList.add('active');
+        modalImg.src = img.src;
+        document.body.style.overflow = 'hidden';
+      });
+    });
+
+    // Close modal on close button click
+    closeBtn.addEventListener('click', () => {
+      modal.classList.remove('active');
+      document.body.style.overflow = 'auto';
+    });
+
+    // Close modal on background click
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.classList.remove('active');
+        document.body.style.overflow = 'auto';
+      }
+    });
+
+    // Close modal on Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modal.classList.contains('active')) {
+        modal.classList.remove('active');
+        document.body.style.overflow = 'auto';
+      }
+    });
   }
 
   handleTouchStart(e) {
