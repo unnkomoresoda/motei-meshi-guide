@@ -254,6 +254,30 @@ body {
   cursor: not-allowed;
 }
 
+/* Latest Page Button */
+.btn-latest {
+  background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+  border: none;
+  color: #000;
+  font-size: 12px;
+  padding: 6px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  margin-top: 8px;
+  display: inline-block;
+}
+
+.btn-latest:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 215, 0, 0.4);
+}
+
+.btn-latest:active {
+  transform: translateY(0);
+}
+
 /* Progress Bar */
 .progress-bar {
   position: absolute;

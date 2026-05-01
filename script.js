@@ -19,6 +19,7 @@ class MangaViewer {
     document.getElementById('nextBtn').addEventListener('click', () => this.nextPage());
     document.getElementById('prev10Btn').addEventListener('click', () => this.prevPage(10));
     document.getElementById('next10Btn').addEventListener('click', () => this.nextPage(10));
+    document.getElementById('latestBtn').addEventListener('click', () => this.showPage(this.totalPages - 1));
 
     // Image zoom listeners
     this.setupImageZoom();
